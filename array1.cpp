@@ -26,6 +26,30 @@ void insert(struct Array *arr,int index,int x){
     }
 }
 
+void swap (int *x,int *y){
+    int temp;
+    temp=*x;
+    *x=*y;
+    *y=temp;
+}
+
+
+int linearS(struct Array *arr,int element){
+      
+for(int i=0;i<arr->length;i++){
+    if(arr->A[i]==element)
+    {  
+        // swap(arr->A[i],arr->A[0]);
+        return i;
+    }
+}
+
+return -1;
+
+}
+
+
+
 void display(struct Array arr ){
 cout<<"elelmemts are "<<endl; 
 for(int i=0;i<arr.length;i++){
@@ -47,6 +71,7 @@ struct Array arr={{2,3,4,5,6},10,5};
 // }
 // append(&arr,20);
 // insert(&arr,3,10);
+cout<<linearS(&arr,6);
 display(arr);
 
 
