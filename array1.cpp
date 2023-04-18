@@ -39,13 +39,45 @@ int linearS(struct Array *arr,int element){
 for(int i=0;i<arr->length;i++){
     if(arr->A[i]==element)
     {  
-        // swap(arr->A[i],arr->A[0]);
+        swap(&arr->A[i],&arr->A[i-1]);
         return i;
     }
 }
 
 return -1;
 
+}
+
+int Get(struct Array arr,int index) {
+    if(index>=0 && index<arr.length)
+    {
+        return arr.A[index];
+    }
+    return -1;
+}
+
+void Set(struct Array *arr,int index,int x ){
+    if(index>=0 && index<arr->length)
+    arr->A[index]=x;
+}
+
+int Max(struct Array arr){
+    int max = arr.A[0];
+    for(int i=1;i<arr.length;i++){
+        if(max < arr.A[i])
+        max=arr.A[i];
+    }
+    return max;
+}
+
+
+int Min(struct Array arr){
+    int min = arr.A[0];
+    for(int i=1;i<arr.length;i++){
+        if(min > arr.A[i])
+        min=arr.A[i];
+    }
+    return min;
 }
 
 
@@ -71,7 +103,12 @@ struct Array arr={{2,3,4,5,6},10,5};
 // }
 // append(&arr,20);
 // insert(&arr,3,10);
-cout<<linearS(&arr,6);
+// cout<<linearS(&arr,6);
+// cout<<Get(arr,2)<<endl;
+// Set(&arr,2,6);
+// cout<<Get(arr,2)<<endl;
+// cout<<Max(arr)<<endl;
+// cout<<Min(arr)<<endl;
 display(arr);
 
 
