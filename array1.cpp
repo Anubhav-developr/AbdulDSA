@@ -7,6 +7,14 @@ struct Array {
     int length;
 };
 
+
+void Reverse(struct Array *arr){
+    int *B;
+    int i,j;
+}
+
+
+
 void append(struct Array *arr , int x){
 //call by address hai 
 //condition ki array ka size uske length se bada hai kya
@@ -109,6 +117,7 @@ struct Array arr={{2,3,4,5,6},10,5};
 // cout<<Get(arr,2)<<endl;
 // cout<<Max(arr)<<endl;
 // cout<<Min(arr)<<endl;
+
 display(arr);
 
 
