@@ -11,7 +11,7 @@ void changelength(struct Rectangle *r1,int l){
 }
 
 int main(){
-     struct Rectangle r={10,5};
+     struct Rectangle r={10,5};   
      changelength(&r,20);
      cout<<r.length;
      
